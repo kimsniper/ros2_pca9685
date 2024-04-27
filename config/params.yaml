@@ -1,0 +1,11 @@
+# Sensor related parameters
+pca9685_node:
+  ros__parameters:
+    # Hz - Servo requires a 20ms duration
+    servo_freq: 50.0
+    # Use internal frequency
+    pca9685_osc: 25000000.0
+    # Offset from max pwm duty cycle (2ms)
+    max_offset_ms: 0.6
+    # Offset from min pwm duty cycle (1ms)
+    min_offset_ms: -0.3
