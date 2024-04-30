@@ -5,7 +5,6 @@
   <version>1.0.0</version>
   <description>PCA9685 Device ROS2 Package</description>
 
-  <author email="kim1991mail@gmail.com">Mezael Docoy</author>
   <maintainer email="kim1991mail@gmail.com">Mezael Docoy</maintainer>
 
   <license>BSD-3-Clause</license>
