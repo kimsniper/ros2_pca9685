@@ -55,7 +55,11 @@ Pca9685::Pca9685(const std::string &device, int i2c_address, int i2c_gen_address
     }
 }
 
-Pca9685::~Pca9685() = default;
+Pca9685::~Pca9685()
+{
+    /* Perform device reset */
+    Pca9685_Reset();
+}
 
 /*==================================================================================================
 *                                       PRIVATE MEMBER FUNCTIONS

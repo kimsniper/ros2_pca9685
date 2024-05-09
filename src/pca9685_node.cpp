@@ -52,7 +52,7 @@ void Pca9685Node::ServiceCallback(const ros2_pca9685::srv::SetPwm::Request::Shar
     }
 
     /* Log details */
-    RCLCPP_INFO_STREAM(get_logger(), "Trigger servo at channel number " << request->channel_num << " to " << request->target_position << " degrees angle position" << std::endl);
+    RCLCPP_INFO_STREAM(get_logger(), "Actuate servo at channel number " << static_cast<int>(request->channel_num) << " to " << static_cast<double>(request->target_position) << " degrees angle position" << std::endl);
 
     /* Calculate duty cycle based on degree value */
     double duty_cycle {0.0};
@@ -63,7 +63,7 @@ void Pca9685Node::ServiceCallback(const ros2_pca9685::srv::SetPwm::Request::Shar
     pca9685_dev_->Pca9685_LedPwmSet(request->channel_num, duty_cycle);
 
     response->is_success = true;
-    response->response = "Servo trigger completed";
+    response->response = "Servo actuation completed";
 }
 
 int main(int argc, char* argv[])
