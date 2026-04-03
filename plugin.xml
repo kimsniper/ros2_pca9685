@@ -1,0 +1,14 @@
+<library path="pca9685_hardware_interface">
+
+  <class
+    name="ros2_pca9685/PCA9685Hardware"
+    type="ros2_pca9685::PCA9685Hardware"
+    base_class_type="hardware_interface::SystemInterface">
+
+    <description>
+        PCA9685 ros2_control hardware interface
+    </description>
+
+  </class>
+
+</library>
