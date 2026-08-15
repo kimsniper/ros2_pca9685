@@ -54,7 +54,7 @@ Clone into your ROS2 workspace:
 
 ``` bash
 cd ~/ros2_ws/src
-git clone <your-repo-url>
+git clone https://github.com/kimsniper/ros2_pca9685
 ```
 
 Build:
